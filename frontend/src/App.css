@@ -1,0 +1,46 @@
+/* Estilos específicos para la calculadora */
+.calculator-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-button {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.calculator-display {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Animaciones */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-pressed {
+  animation: buttonPress 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator-display {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-display {
+    font-size: 2rem;
+  }
+}
